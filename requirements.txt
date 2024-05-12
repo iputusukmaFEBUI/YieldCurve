@@ -1,7 +1,6 @@
 pip install streamlit
 pandas
 streamlit_pandas
-os
 matplotlib.pyplot
 seaborn
 plotly.express
