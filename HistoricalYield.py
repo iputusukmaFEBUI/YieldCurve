@@ -16,6 +16,9 @@ st.subheader('by I Putu Sukma Hendrawan')
 st.write("This (basic) dashboard provide the historical yield data for Indonesia Government Bond. The data are collected from investing.com and presented in this dashboard - for the both convenience and scientific purpose - using chart and table. The charts themselves are two dimensional and three dimensional line chart. I do hope you enjoy the experience on using this dashboard.")
 st.write("iputusukma@pm.me")
 
+
+st.sidebar.success("select the dashboard pages")
+
 @st.cache_data
 def load_data():
     df = pd.read_csv('YCdata.csv')
