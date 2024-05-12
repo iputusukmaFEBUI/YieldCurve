@@ -17,7 +17,7 @@ st.write("This (basic) dashboard provide the historical yield data for Indonesia
 st.write("iputusukma@pm.me")
 
 
-st.sidebar.success("select the dashboard pages")
+st.sidebar.success()
 
 @st.cache_data
 def load_data():
