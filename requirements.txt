@@ -1,0 +1,12 @@
+pandas
+streamlit
+streamlit_pandas
+os
+matplotlib.pyplot
+seaborn
+plotly.express
+plotly.graph_objects
+datetime
+timedelta
+pmdarima 
+numpy
