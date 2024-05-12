@@ -18,7 +18,7 @@ st.subheader('by I Putu Sukma Hendrawan')
 
 @st.cache_data
 def load_data():
-    df = pd.read_csv('LFYield.csv')
+    df = pd.read_csv('pages/LFYield.csv')
     return df
 
 df = load_data()
