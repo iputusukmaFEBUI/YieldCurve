@@ -21,7 +21,7 @@ st.write("iputusukma@pm.me")
 
 @st.cache_data
 def load_data():
-    df = pd.read_csv('HistYieldCurve.csv')
+    df = pd.read_csv('pages/HistYieldCurve.csv')
     return df
 
 df = load_data()
