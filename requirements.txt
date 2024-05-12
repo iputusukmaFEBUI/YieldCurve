@@ -3,8 +3,7 @@ pandas
 streamlit_pandas
 matplotlib.pyplot
 seaborn
-plotly.express
-plotly.graph_objects
+plotly
 datetime
 pmdarima 
 numpy
