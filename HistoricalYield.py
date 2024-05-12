@@ -31,7 +31,7 @@ df.columns = ['Date','Maturity','Yield']
 wide_df.set_index(['Date'],inplace=True)
 
 
-st.write("The latest yield at "+ wide_df['Date'].iloc[0])
+st.write("The latest yield at 2024-05-08")
 # ---- MAIN PAGE ----
 
 st.markdown('##')
