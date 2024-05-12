@@ -30,12 +30,8 @@ df = pd.melt(df, id_vars='Date', value_vars=['1', '3', '6','12','36','60','120',
 df.columns = ['Date','Maturity','Yield']
 wide_df.set_index(['Date'],inplace=True)
 
-#st.dataframe(df)
 
-# ---- SIDEBAR -----
-
-
-
+st.write("The latest yield at "+ wide_df['Date'].iloc[0])
 # ---- MAIN PAGE ----
 
 st.markdown('##')
