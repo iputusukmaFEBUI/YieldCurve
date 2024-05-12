@@ -6,6 +6,6 @@ matplotlib.pyplot
 seaborn
 plotly.express
 plotly.graph_objects
-from datetime import datetime, timedelta
+datetime
 pmdarima 
 numpy
