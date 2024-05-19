@@ -51,12 +51,11 @@ with colC:
     if st.button('Calculate'):
         
         tenure = float(tenure)
-        beta0 = fc_level[0]
+        beta0 = 0.07243947681522271 #result from Auto ARIMA
         beta1 = df['Slope'][0]
         beta2 = df['Curvature'][0]
         constant = dfset.loc[:, 'Lambda'].mean()
 
-        0.07243947681522271
         calc_yield =beta0+(beta1*((1-np.exp(-tenure/constant))/(tenure/constant)))+(beta2*(((1-np.exp(-tenure/constant))/(tenure/constant))-(np.exp(-tenure/constant))))
 
         st.write("Bond/Project Tenure: "+tenure)
