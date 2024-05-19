@@ -58,14 +58,15 @@ with colC:
 
         calc_yield =beta0+(beta1*((1-np.exp(-tenure/constant))/(tenure/constant)))+(beta2*(((1-np.exp(-tenure/constant))/(tenure/constant))-(np.exp(-tenure/constant))))
 
-        st.write("Bond/Project Tenure: "+tenure)
-        st.write("Level: "+beta0)
-        st.write("Slope: "+beta1)
-        st.write("Curvature: "+beta2)
-        st.write("Decay Term/Lambda: "+constant)
-        
+
         st.metric(label='Yield:',value=str(format(calc_yield*100,'.3F')+"%"))
         st.write("You can use this yield as an alternative base rate or a direct discount factor for whatever kind of appraisal you currently conducted.")
+
+        st.metric(label='Tenure:',value=str(format(tenure,'.3F')+"tahun"))
+        st.metric(label='Level:',value=str(format(beta0,'.3F')))
+        st.metric(label='Slope:',value=str(format(beta1,'.3F')))
+        st.metric(label='Curvature:',value=str(format(beta2,'.3F')))
+        st.metric(label='Decay term:',value=str(format(constant,'.3F')))
 
 
 
