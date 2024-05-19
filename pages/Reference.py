@@ -1,5 +1,6 @@
 import streamlit as st
 
+st.set_page_config(page_title="Yield Curve Dashboard: Historical and Predictive", page_icon=":bar_chart",layout='wide')
 
 st.subheader('Reference')
 st.write("Nelson, C. R., & Siegel, A. F. (1987). Parsimonious modeling of yield curves. The Journal of Business, 60(4), 473–489. https://www.jstor.org/stable/2352957")
