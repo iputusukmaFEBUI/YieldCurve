@@ -36,11 +36,11 @@ dfset = df.reindex(
 
 colA,colB,colC=st.columns([1,1,1],gap="large")
 with colA:
-    st.write("Term structure of interest rate i.e., yield curve has many applications in viewing market conditions (Reinicke, 2019), fixed-income portfolio management and risk management (Lee, 2016). I follow the parsimonious model by Nelson-Siegel (1987) and Diebold & Li (2006) arguing that yield curve is determined by rather latent factors - derived form mathematical model - which are: Level (the long term factor/beta 0), Slope (the short term factor/beta 1), and Curvature (the medium-term factor/beta 2), accompanied by Lambda as the decay term. I estimate these parameters using curve-fitting mechanism employing this following equation:")
+    st.write("The term structure of interest rate i.e., yield curve has many applications in viewing market conditions (Reinicke, 2019), fixed-income portfolio management, and risk management (Lee, 2016). I follow the parsimonious model by Nelson-Siegel (1987) and Diebold & Li (2006) arguing that the yield curve is determined by rather latent factors - derived from a mathematical model - which are: Level (the long-term factor/beta 0), Slope (the short term factor/beta 1), and Curvature (the medium-term factor/beta 2), accompanied by Lambda as the decay term. I estimate these parameters using a curve-fitting mechanism employing the following equation:")
     st.latex(r'''
     r(T)=\beta_0 + \beta_1\left [ \frac{1-e^{\frac{-T}{\lambda} }}{\frac{-T}{\lambda}} \right ]+\beta_2\left [ \frac{1-e^{\frac{-T}{\lambda} }}{\frac{-T}{\lambda}} - e^{\frac{-T}{\lambda}}\right ]
     ''') 
-    st.write("The AR(1) model then use to forecast the Level while the latest Slope and Curvature are used. The decay term Lambda that is used for forecasting is the arithmatic average of Lambda within entire historical dataset. Our dataset for this forecasting is the monthly yield curve (presented on per annum basis).")   
+    st.write("The AR(1) model is then used to forecast the Level while the latest Slope and Curvature are used. The decay term Lambda that is used for forecasting is the arithmetic average of Lambda within the entire historical dataset, following the approach used by Reinicke (2019). Our dataset for this forecasting is the monthly yield curve (presented on per annum basis).")   
     st.write("Forecasted yield can be used for the purpose of portfolio and risk management, as well as providing a base rate for income-approach project/real estate appraisal.")
     st.write("iputusukma@pm.me")
 with colB:
@@ -76,6 +76,12 @@ with colC:
 
         calc_yield =beta0+(beta1*((1-np.exp(-tenure/constant))/(tenure/constant)))+(beta2*(((1-np.exp(-tenure/constant))/(tenure/constant))-(np.exp(-tenure/constant))))
 
+        st.write("Bond/Project Tenure: "+tenure)
+        st.write("Level: "+beta0)
+        st.write("Slope: "+beta1)
+        st.write("Curvature: "+beta2)
+        st.write("Decay Term/Lambda: "+constant)
+        
         st.metric(label='Yield:',value=str(format(calc_yield*100,'.3F')+"%"))
         st.write("You can use this yield as an alternative base rate or a direct discount factor for whatever kind of appraisal you currently conducted.")
 
