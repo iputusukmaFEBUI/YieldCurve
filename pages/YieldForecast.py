@@ -46,7 +46,7 @@ with colA:
 with colB:
     st.dataframe(df, width=400, height=600)
 with colC:
-    tenure = st.text_input("Input the maturity of the bond/project (in years):")
+    tenure = st.text_input("Input the maturity or tenure of the bond/project (in years), decimal is eligible for calculation:")
 
     if st.button('Calculate'):
         
@@ -62,7 +62,7 @@ with colC:
         st.metric(label='Yield:',value=str(format(calc_yield*100,'.3F')+"%"))
         st.write("You can use this yield as an alternative base rate or a direct discount factor for whatever kind of appraisal you currently conducted.")
 
-        st.metric(label='Tenure:',value=str(format(tenure,'.3F')+"tahun"))
+        st.metric(label='Tenure:',value=str(format(tenure,'.3F')+" tahun"))
         st.metric(label='Level:',value=str(format(beta0,'.3F')))
         st.metric(label='Slope:',value=str(format(beta1,'.3F')))
         st.metric(label='Curvature:',value=str(format(beta2,'.3F')))
