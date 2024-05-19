@@ -49,24 +49,6 @@ with colC:
     tenure = st.text_input("Input the maturity of the bond/project (in years):")
 
     if st.button('Calculate'):
-        # set seasonal to True
-        seasonal = True
-
-        # use pmdarima to automatically select best ARIMA model
-        model_level = pm.auto_arima(dfset['Level'], 
-                            m=30,               # frequency of series                      
-                            seasonal=seasonal,  # TRUE if seasonal series
-                            d=None,             # let model determine 'd'
-                            test='adf',         # use adftest to find optimal 'd'
-                            start_p=0, start_q=0, # minimum p and q
-                            max_p=5, max_q=5, # maximum p and q
-                            D=None,             # let model determine 'D'
-                            trace=True,
-                            error_action='ignore',  
-                            suppress_warnings=True, 
-                            stepwise=True)
-
-        fc_level, confint = model_level.predict(n_periods=1, return_conf_int=True)
         
         tenure = float(tenure)
         beta0 = fc_level[0]
@@ -74,6 +56,7 @@ with colC:
         beta2 = df['Curvature'][0]
         constant = dfset.loc[:, 'Lambda'].mean()
 
+        0.07243947681522271
         calc_yield =beta0+(beta1*((1-np.exp(-tenure/constant))/(tenure/constant)))+(beta2*(((1-np.exp(-tenure/constant))/(tenure/constant))-(np.exp(-tenure/constant))))
 
         st.write("Bond/Project Tenure: "+tenure)
