@@ -13,7 +13,7 @@ st.set_page_config(page_title="Yield Curve Dashboard: Historical and Predictive"
 st.header('Historical Yield')
 st.subheader('by I Putu Sukma Hendrawan')
 
-st.write("This (basic) dashboard provide the historical yield data for Indonesia Government Bond. The data are collected from investing.com and presented in this dashboard - for the both convenience and scientific purpose - using chart and table. The charts themselves are two dimensional and three dimensional line chart. I do hope you enjoy the experience on using this dashboard.")
+st.write("This (basic) dashboard provides the historical yield data for Indonesia Government Bonds. The data are collected from investing.com and presented in this dashboard - for both convenience and scientific purposes - using a chart and table. The charts themselves are two-dimensional and three-dimensional line charts. I do hope you enjoy the experience of using this dashboard.")
 st.write("iputusukma@pm.me")
 
 
@@ -31,7 +31,7 @@ df.columns = ['Date','Maturity','Yield']
 wide_df.set_index(['Date'],inplace=True)
 
 
-st.write("The latest yield at 2024-05-08")
+st.write("The latest yield at 2024-05-17")
 # ---- MAIN PAGE ----
 
 st.markdown('##')
