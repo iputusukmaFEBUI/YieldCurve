@@ -57,7 +57,7 @@ def validate():
         st.session_state.multiselect = ['1']
 
 maturity = st.multiselect(
-    "Select the time to maturity:",
+    "Select the time to maturity (in month):",
     options = ("1","3","6",'12',"36","60","120","180","240","300","360"),
     default="1",
     on_change=validate,
