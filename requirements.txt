@@ -6,5 +6,4 @@ seaborn
 plotly
 datetime
 pmdarima 
-numpy
-numpy -- upgrade
+numpy<2
