@@ -7,3 +7,4 @@ plotly
 datetime
 pmdarima 
 numpy
+numpy -- upgrade
