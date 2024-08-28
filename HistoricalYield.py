@@ -31,7 +31,7 @@ df.columns = ['Date','Maturity','Yield']
 wide_df.set_index(['Date'],inplace=True)
 
 
-st.write("The latest yield at 2024-05-17")
+st.write("The latest yield at 2024-08-23")
 # ---- MAIN PAGE ----
 
 st.markdown('##')
@@ -71,7 +71,7 @@ df_selection = df.query(
 
 
 
-plotly_figure = px.area(data_frame = df_selection,
+plotly_figure = px.bar(data_frame = df_selection,
 x = df_selection['Date'], y=df_selection['Yield'], color = df_selection['Maturity'], template='seaborn', line_shape='spline',
 title= 'Yield of INDOGB, Maturity in Month(s)', color_discrete_sequence=px.colors.qualitative.Pastel
 )
