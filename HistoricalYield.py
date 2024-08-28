@@ -11,7 +11,7 @@ import plotly.graph_objects as go
 st.set_page_config(page_title="Yield Curve Dashboard: Historical and Predictive", page_icon=":bar_chart",layout='wide')
 
 st.header('Historical Yield')
-st.subheader('by I Putu Sukma Hendrawan')
+st.write('by I Putu Sukma Hendrawan')
 
 st.write("This (basic) dashboard provides the historical yield data for Indonesian Government Bonds. The data are collected from investing.com and presented in this dashboard - for both convenience and scientific purposes - using a chart and table. The charts themselves are two-dimensional and three-dimensional line charts. I do hope you enjoy the experience of using this dashboard.")
 st.write("iputusukma@pm.me")
