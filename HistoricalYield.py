@@ -72,7 +72,7 @@ df_selection = df.query(
 
 
 plotly_figure = px.bar(data_frame = df_selection,
-x = df_selection['Date'], y=df_selection['Yield'], color = df_selection['Maturity'], template='seaborn', line_shape='spline',
+x = df_selection['Date'], y=df_selection['Yield'], color = df_selection['Maturity'], template='seaborn', 
 title= 'Yield of INDOGB, Maturity in Month(s)', color_discrete_sequence=px.colors.qualitative.Pastel
 )
 
