@@ -69,7 +69,7 @@ with colC:
         st.metric(label='Decay term:',value=str(format(constant,'.3F')))
 
 
-     st.write('by I Putu Sukma Hendrawan - iputusukma@pm.me')
+st.write('by I Putu Sukma Hendrawan - iputusukma@pm.me')
 
 
 
