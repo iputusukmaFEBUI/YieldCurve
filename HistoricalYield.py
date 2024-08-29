@@ -91,6 +91,8 @@ fig.update_layout(title='3-Dimensional Historical Yield | x = Maturity in Months
 
 st.plotly_chart(plotly_figure, use_container_width=True)
 
+st.markdown('##')
+
 colA,colB,=st.columns(2,gap="large")
 with colA:
     st.plotly_chart(fig)
