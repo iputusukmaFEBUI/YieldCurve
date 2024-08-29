@@ -51,7 +51,8 @@ with colC:
     if st.button('Calculate'):
         
         tenure = float(tenure)
-        beta0 = 0.07243947681522271 #result from Auto ARIMA
+        #beta0 = 0.07243947681522271 #result from Auto ARIMA
+        beta1 = df['Level'][0]
         beta1 = df['Slope'][0]
         beta2 = df['Curvature'][0]
         constant = dfset.loc[:, 'Lambda'].mean()
