@@ -39,17 +39,17 @@ st.markdown('##')
 col1,col2,col3,col4,col5,col6=st.columns(6)
 
 with col1:
-    st.metric(label='1-Month Yield',value=str(wide_df.iloc[0,0])+"%", delta=str(format((wide_df.iloc[0,0]/wide_df.iloc[1,0]-1)*100,'.3F'))+"%")
+    st.metric(label='1-Month Yield & daily return',value=str(wide_df.iloc[0,0])+"%", delta=str(format((wide_df.iloc[0,0]/wide_df.iloc[1,0]-1)*100,'.3F'))+"%")
 with col2:
-    st.metric(label='3-Month Yield',value=str(wide_df.iloc[0,1])+"%", delta=str(format((wide_df.iloc[0,1]/wide_df.iloc[1,1]-1)*100,'.3F'))+"%")
+    st.metric(label='3-Month Yield & daily return',value=str(wide_df.iloc[0,1])+"%", delta=str(format((wide_df.iloc[0,1]/wide_df.iloc[1,1]-1)*100,'.3F'))+"%")
 with col3:
-    st.metric(label='1-Year Yield',value=str(wide_df.iloc[0,3])+"%", delta=str(format((wide_df.iloc[0,3]/wide_df.iloc[1,3]-1)*100,'.3F'))+"%")
+    st.metric(label='1-Year Yield & daily return',value=str(wide_df.iloc[0,3])+"%", delta=str(format((wide_df.iloc[0,3]/wide_df.iloc[1,3]-1)*100,'.3F'))+"%")
 with col4:
-    st.metric(label='5-Year Yield',value=str(wide_df.iloc[0,5])+"%", delta=str(format((wide_df.iloc[0,5]/wide_df.iloc[1,5]-1)*100,'.3F'))+"%")
+    st.metric(label='5-Year Yield & daily return',value=str(wide_df.iloc[0,5])+"%", delta=str(format((wide_df.iloc[0,5]/wide_df.iloc[1,5]-1)*100,'.3F'))+"%")
 with col5:
-    st.metric(label='10-Year Yield',value=str(wide_df.iloc[0,6])+"%", delta=str(format((wide_df.iloc[0,6]/wide_df.iloc[1,6]-1)*100,'.3F'))+"%")
+    st.metric(label='10-Year Yield & daily return',value=str(wide_df.iloc[0,6])+"%", delta=str(format((wide_df.iloc[0,6]/wide_df.iloc[1,6]-1)*100,'.3F'))+"%")
 with col6:
-    st.metric(label='30-Year Yield',value=str(wide_df.iloc[0,10])+"%", delta=str(format((wide_df.iloc[0,10]/wide_df.iloc[1,10]-1)*100,'.3F'))+"%")
+    st.metric(label='30-Year Yield & daily return',value=str(wide_df.iloc[0,10])+"%", delta=str(format((wide_df.iloc[0,10]/wide_df.iloc[1,10]-1)*100,'.3F'))+"%")
 
 
 def validate():
