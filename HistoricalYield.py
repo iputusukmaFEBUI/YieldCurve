@@ -81,7 +81,7 @@ df_selection = df.query(
 
 c = (
    alt.Chart(df_selection)
-   .mark_bar()
+   .mark_area()
    .encode(x="Date", y="Yield", color="Maturity", tooltip=["Date", "Yield"])
 )
 
