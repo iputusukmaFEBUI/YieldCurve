@@ -82,7 +82,7 @@ df_selection = df.query(
 c = (
    alt.Chart(df_selection)
    .mark_point()
-   .encode(x="Date", y="Yield", color=alt.condition(brush, color, alt.value("lightgray")), tooltip=["Date", "Yield"])
+   .encode(x="Date", y="Yield", color="Maturity", tooltip=["Date", "Yield"])
 )
 
 st.altair_chart(c, use_container_width=True)
