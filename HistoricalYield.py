@@ -53,8 +53,8 @@ with col6:
 
 
 def validate():
-    if '1' not in st.session_state.multiselect:
-        st.session_state.multiselect = ['1']
+    if '12' not in st.session_state.multiselect:
+        st.session_state.multiselect = ['12']
 
 st.markdown('##')
 
@@ -73,10 +73,19 @@ df_selection = df.query(
 
 
 
-plotly_figure = px.line(data_frame = df_selection,
-x = df_selection['Date'], y=df_selection['Yield'], color = df_selection['Maturity'], template='seaborn', line_shape='spline',
-title= 'Yield of INDOGB, Maturity in Month(s)', color_discrete_sequence=px.colors.qualitative.Pastel
+#plotly_figure = px.line(data_frame = df_selection,
+#x = df_selection['Date'], y=df_selection['Yield'], color = df_selection['Maturity'], template='seaborn', line_shape='spline',
+#title= 'Yield of INDOGB, Maturity in Month(s)', color_discrete_sequence=px.colors.qualitative.Pastel
+#)
+
+c = (
+   alt.Chart(df_selection)
+   .mark_circle()
+   .encode(x="Date", y="Yield", size="Yield", color="Yield", tooltip=["Date", "Yield"])
 )
+
+st.altair_chart(c, use_container_width=True)
+
 
 
 x = wide_df.columns
