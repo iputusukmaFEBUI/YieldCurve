@@ -34,7 +34,7 @@ wide_df.set_index(['Date'],inplace=True)
 st.write("The latest yield is at 2024-08-23. The delta is daily change of yield")
 # ---- MAIN PAGE ----
 
-st.markdown('#')
+st.markdown('##')
 
 col1,col2,col3,col4,col5,col6=st.columns(6)
 
@@ -55,6 +55,8 @@ with col6:
 def validate():
     if '1' not in st.session_state.multiselect:
         st.session_state.multiselect = ['1']
+
+st.markdown('##')
 
 maturity = st.multiselect(
     "Select the time to maturity (in month):",
