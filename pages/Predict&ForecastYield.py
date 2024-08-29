@@ -14,7 +14,7 @@ import numpy as np
 st.set_page_config(page_title="Yield Curve Dashboard: Historical and Predictive", page_icon=":bar_chart",layout='wide')
 
 st.header('Yield Forecasting')
-st.subheader('by I Putu Sukma Hendrawan')
+st.write('by I Putu Sukma Hendrawan')
 
 @st.cache_data
 def load_data():
@@ -52,7 +52,7 @@ with colC:
         
         tenure = float(tenure)
         #beta0 = 0.07243947681522271 #result from Auto ARIMA
-        beta1 = df['Level'][0]
+        beta0 = df['Level'][0]
         beta1 = df['Slope'][0]
         beta2 = df['Curvature'][0]
         constant = dfset.loc[:, 'Lambda'].mean()
