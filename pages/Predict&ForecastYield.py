@@ -14,7 +14,6 @@ import numpy as np
 st.set_page_config(page_title="Yield Curve Dashboard: Historical and Predictive", page_icon=":bar_chart",layout='wide')
 
 st.header('Yield Forecasting')
-st.write('by I Putu Sukma Hendrawan - iputusukma@pm.me')
 
 
 @st.cache_data
@@ -70,7 +69,7 @@ with colC:
         st.metric(label='Decay term:',value=str(format(constant,'.3F')))
 
 
-
+     st.write('by I Putu Sukma Hendrawan - iputusukma@pm.me')
 
 
 
