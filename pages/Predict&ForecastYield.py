@@ -14,7 +14,8 @@ import numpy as np
 st.set_page_config(page_title="Yield Curve Dashboard: Historical and Predictive", page_icon=":bar_chart",layout='wide')
 
 st.header('Yield Forecasting')
-st.write('by I Putu Sukma Hendrawan')
+st.write('by I Putu Sukma Hendrawan - iputusukma@pm.me')
+
 
 @st.cache_data
 def load_data():
@@ -42,7 +43,6 @@ with colA:
     ''') 
     st.write("The AR(1) model is then used to forecast the Level while the latest Slope and Curvature are used. The decay term Lambda that is used for forecasting is the arithmetic average of Lambda within the entire historical dataset, following the approach used by Reinicke (2019). Our dataset for this forecasting is the monthly yield curve (presented on per annum basis).")   
     st.write("Forecasted yield can be used for the purpose of portfolio and risk management, as well as providing a base rate for income-approach project/real estate appraisal.")
-    st.write("iputusukma@pm.me")
 with colB:
     st.dataframe(df, width=400, height=600)
 with colC:
