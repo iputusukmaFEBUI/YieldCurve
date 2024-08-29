@@ -11,7 +11,6 @@ from datetime import datetime, timedelta
 st.set_page_config(page_title="Yield Curve Dashboard: Historical and Predictive", page_icon=":bar_chart",layout='wide')
 
 st.header('Historical Yield Curve')
-st.write('by I Putu Sukma Hendrawan - iputusukma@pm.me')
 
 
 st.write("The term structure of interest rate i.e., yield curve has many applications in viewing market conditions (Reinicke, 2019), fixed-income portfolio management, and risk management (Lee, 2016). Despite such a significant role, the information regarding Indonesia's yield curve is relatively limited, in terms of the data being commonly statically presented, and the access to particular information is commonly not available for free. Aspire to provide an alternative channel for such information, I create this dashboard presenting an interactive view of the daily yield curve for a 10-year period from 2024 to early May 2024. The yield curves are theoretical curves fitted from available Indonesia Government Bonds yield data from investing.com. I fitted the curve using the parsimonious model suggested by Nelson-Siegel (1987) and Diebold & Li (2006) as follows:")
@@ -88,3 +87,7 @@ with colB:
     st.table(view_df_select[16:])
 with colC:
     st.plotly_chart(plotly_figure, use_container_width=True)
+
+
+st.write('by I Putu Sukma Hendrawan - iputusukma@pm.me')
+
