@@ -34,7 +34,7 @@ wide_df.set_index(['Date'],inplace=True)
 st.write("The latest yield is at 2024-08-23. The delta is daily change of yield")
 # ---- MAIN PAGE ----
 
-#st.markdown('##')
+st.markdown('#')
 
 col1,col2,col3,col4,col5,col6=st.columns(6)
 
